@@ -6,8 +6,9 @@ $(document).ready(function () {
    let wrong = 0;
    let unanswered = 0;
    let timeleft = 0;
-   let questionPool = [];
-   let currQues = {};
+   let questPool = [];
+   let randQuestPool = [];
+   let currQuest = {};
 
    //store divs to variables here
    let questionDiv = $("#question");
@@ -19,7 +20,7 @@ $(document).ready(function () {
    let timer = $("#timer");
 
    //objects for questions and the respective answers here
-   let ques1 = {
+   let quest1 = {
       question : "question1",
       cAns : "correct",
       wAns1 : "inc1",
@@ -27,7 +28,7 @@ $(document).ready(function () {
       wAns3 : "inc3",
    };
 
-   let ques2 = {
+   let quest2 = {
       question : "question2",
       cAns : "correct",
       wAns1 : "inc1",
@@ -35,36 +36,54 @@ $(document).ready(function () {
       wAns3 : "inc3",
    };
 
-   let ques3 = {
-      question : "question2",
+   let quest3 = {
+      question : "question3",
       cAns : "correct",
       wAns1 : "inc1",
       wAns2 : "inc2",
       wAns3 : "inc3",
    };
 
-   let ques4 = {
-      question : "question2",
+   let quest4 = {
+      question : "question4",
       cAns : "correct",
       wAns1 : "inc1",
       wAns2 : "inc2",
       wAns3 : "inc3",
    };
 
-   let ques5 = {
-      question : "question2",
+   let quest5 = {
+      question : "question5",
       cAns : "correct",
       wAns1 : "inc1",
       wAns2 : "inc2",
       wAns3 : "inc3",
    };
 
-   let ques6 = {
-      question : "question2",
+   let quest6 = {
+      question : "question6",
       cAns : "correct",
       wAns1 : "inc1",
       wAns2 : "inc2",
       wAns3 : "inc3",
+   };
+
+   //function to randomize an array
+   function randArray(array) {
+      let arrayLength = array.length;
+      let resultArray = [];
+      for (let i = 0; i < arrayLength; i++) {
+         let randInd = Math.floor(Math.random() * array.length);
+         resultArray.push(array[randInd]);
+         array.splice(randInd,1);
+      };
+      return resultArray;
+   };
+
+   //function to reset game
+   function resetGame() {
+      questPool = [quest1, quest2, quest3, quest4, quest5, quest6];
+      randQuestPool = randArray(questPool);
    };
 
 
