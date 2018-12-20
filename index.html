@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div class="container" id="mainscreen">
+    <div class="container my-5" id="mainScreen">
         <div class="row mb-5">
             <div class="col text-center">
                 <h1 class="display-4">Trivia Game!</h1>
@@ -28,41 +28,118 @@
         </div>
         <div class="row">
             <div class="col text-center">
-                <h4>Time Left to Answer the Question:</h3>
+                <h3>Time Left to Answer the Question:</h3>
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col text-center" id="timer">
-                <h2>Seconds</h2>
+            <div class="col text-center">
+                <h2 id="timer">Seconds</h2>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col text-center">
-                <h4 id="question">Question Here</h4>
+                <h4 class="question">Click Here to Start!</h4>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <div class="row">
+                <div class="row my-1">
                     <div class="col text-center">
-                        <h3 class="answers" id="ansA">Answer A</h4>
+                        <button type="button" class="btn btn-primary btn-lg btn-block answers hide" id="ansA"></button>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row my-1">
                     <div class="col text-center">
-                        <h3 class="answers" id="ansB">Answer B</h4>
+                        <button type="button" class="btn btn-primary btn-lg btn-block answers hide" id="ansB"></button>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row my-1">
                     <div class="col text-center">
-                        <h3 class="answers" id="ansC">Answer C</h4>
+                        <button type="button" class="btn btn-primary btn-lg btn-block answers hide" id="ansC"></button>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row my-1">
                     <div class="col text-center">
-                        <h3 class="answers" id="ansD">Answer D</h4>
+                        <button type="button" class="btn btn-primary btn-lg btn-block answers hide" id="ansD"></button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 hide" id="ansScreen">
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h1 class="display-4">Trivia Game!</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <h3>Corrct Answer Was:</h3>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h2 id="corrAns">Answer</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <h3>Your Answer Was:</h3>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h2 id="yourAns">Answer</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 hide" id="gameoverScreen">
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h1 class="display-4">Trivia Game!</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <h3>Total Number of Correct Answers:</h3>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h2 id="rightNo">Number</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <h3>Total Number of Incorrect Answers:</h3>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h2 id="wrongNo">Number</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <h3>Total Number Timed Out:</h3>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h2 id="timeoutNo">Number</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="question">Click Here to Restart!</h2>
             </div>
         </div>
     </div>

@@ -2,6 +2,11 @@ body {
     background: black;
 }
 
-#mainscreen {
+.container {
     background: lightgreen;
+    height: 700px;
+}
+
+.hide {
+    display: none;
 }
